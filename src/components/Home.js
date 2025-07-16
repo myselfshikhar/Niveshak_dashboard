@@ -20,7 +20,7 @@ const Home = () => {
     const Frontend_link =
     window.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://niveshak-frontend.vercel.app/";
+      : "https://niveshak-frontend.vercel.app";
 
   useEffect(() => {
     const verifyUser = async () => {
