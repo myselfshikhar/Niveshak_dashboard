@@ -26,7 +26,7 @@ const Home = () => {
     const verifyUser = async () => {
       try {
         const { data } = await axios.post(
-          `${API_BASE_URL}`, // authentication check endpoint
+          `${API_BASE_URL}/auth`, // authentication check endpoint
           {},
           { withCredentials: true }
         );

@@ -23,7 +23,7 @@ const Summary = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        `${API_BASE_URL}`,
+        `${API_BASE_URL}/auth`,
         {},
         { withCredentials: true }
       );
