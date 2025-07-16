@@ -1,10 +1,54 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify"; 
 
 const Summary = () => {
+
+
+
+  const navigate = useNavigate();
+  const [cookies, removeCookie] = useCookies([]);
+  const [username, setUsername] = useState("");
+
+  const API_BASE_URL =
+    window.location.hostname === "localhost"
+      ? "http://localhost:3002"
+      : "https://niveshak-backend.onrender.com";
+
+  useEffect(() => {
+    const verifyCookie = async () => {
+      if (!cookies.token) {
+        navigate("/login");
+      }
+      const { data } = await axios.post(
+        `${API_BASE_URL}`,
+        {},
+        { withCredentials: true }
+      );
+      const { status, user } = data;
+      setUsername(user);
+      return status
+        ? toast(`Hello ${user}`, {
+            position: "top-right",
+          })
+        : (removeCookie("token"), navigate("/login"));
+    };
+    verifyCookie();
+  }, [cookies, navigate, removeCookie]);
+  const Logout = () => {
+    removeCookie("token");
+    navigate("/signup");
+  };
+
+
   return (
     <>
+
+
       <div className="username">
-        <h6>Hi, User!</h6>
+        <h6>Hi, {username}</h6>
         <hr className="divider" />
       </div>
 

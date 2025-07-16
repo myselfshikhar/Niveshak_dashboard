@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(143, 187, 204, 1) 35%,
+    rgb(188, 240, 251) 100%
+  );
 }
 
 code {
@@ -29,6 +35,7 @@ code {
 }
 
 .funds {
+  color: black;
   width: 100%;
   text-align: right;
   display: flex;
@@ -38,7 +45,7 @@ code {
 
 .funds p {
   font-size: 0.8rem;
-  color: rgb(179, 179, 179);
+  color: rgb(0, 0, 0);
   margin-right: 8px;
 }
 
@@ -60,6 +67,7 @@ code {
 }
 
 .row {
+  color: black;
   width: 100%;
   display: flex;
   align-items: center;
@@ -68,6 +76,7 @@ code {
 }
 
 .col {
+  color: #313131;
   flex-basis: 48%;
   text-align: left;
 }
@@ -104,12 +113,14 @@ code {
 }
 
 .table .data > * {
+  
   margin-bottom: 5%;
 }
 
+
 .table .data p:first-child {
   font-size: 1rem;
-  color: rgb(151, 151, 151);
+  color: black;;
 }
 
 .imp {
@@ -135,7 +146,7 @@ code {
 
 .commodity p {
   margin-bottom: 10%;
-  color: #c9c9c9;
+  color: black;
 }
 
 /* sudo selectors */
@@ -167,7 +178,7 @@ code {
 .order-table th {
   text-align: right;
   padding: 15px 10px;
-  color: rgb(145, 145, 145);
+  color: rgb(0, 0, 0);
   font-weight: 300;
   font-size: 0.8rem;
 }
@@ -212,6 +223,7 @@ code {
 }
 
 .row {
+  color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -235,7 +247,7 @@ code {
 
 .col p {
   font-size: 0.8rem;
-  color: rgb(153, 153, 153);
+  color: rgb(0, 0, 0);
   font-weight: 300;
   margin-top: 2%;
 }
@@ -359,7 +371,7 @@ hr {
 
 .no-orders p {
   margin-top: 6%;
-  color: rgb(173, 173, 173);
+  color: black;
   font-size: 1rem;
   font-weight: 300;
 }
@@ -397,7 +409,7 @@ hr {
 .order-table th {
   text-align: right;
   padding: 15px 10px;
-  color: rgb(145, 145, 145);
+ color: black;
   font-weight: 300;
   font-size: 0.8rem;
 }
@@ -440,6 +452,7 @@ hr {
 }
 
 .row {
+  color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -463,10 +476,11 @@ hr {
 
 .col p {
   font-size: 0.8rem;
-  color: rgb(153, 153, 153);
+  color: rgb(0, 0, 0);
   font-weight: 300;
   margin-top: 2%;
 }
+
 
 .row .col:last-child h5 {
   color: rgb(72, 194, 55);
@@ -531,7 +545,7 @@ hr {
 
 .data .first p {
   font-size: 0.8rem;
-  color: rgb(136, 136, 136);
+  color: black;
 }
 
 .data .first small {
@@ -550,7 +564,7 @@ hr {
 
 .data .second p {
   font-size: 0.8rem;
-  color: rgb(136, 136, 136);
+ color: black;
   margin-bottom: 10px;
   white-space: nowrap;
 }
@@ -624,7 +638,7 @@ hr {
 .percent {
   font-size: 0.8rem;
   font-weight: 400;
-  color: rgb(146, 146, 146);
+color: black; 
 }
 
 /* sudo selectors */
@@ -664,7 +678,7 @@ hr {
   right: 20px;
   font-size: 0.9rem;
   font-weight: 400;
-  color: rgb(177, 177, 177);
+ color: black;
 }
 
 .list {
