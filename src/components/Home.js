@@ -25,11 +25,7 @@ const Home = () => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const { data } = await axios.post(
-          `${API_BASE_URL}/auth`, // authentication check endpoint
-          {},
-          { withCredentials: true }
-        );
+        const { data } = await axios.post(`${API_BASE_URL}/auth`, {}, { withCredentials: true });
         if (!data.status) {
           window.location.replace(`${Frontend_link}/Login`);
         }
